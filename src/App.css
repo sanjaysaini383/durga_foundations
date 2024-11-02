@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+.app {
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 250px;
+ 
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+}
+.heading{
+  margin-top: 90px;
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}
+.profile {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: absolute;
+  right: 60px;
+  top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.profile-avatar {
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 90px;
+}
+
+.filter-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter-buttons .active {
+  background-color: #6C63FF;
+  color: #fff;
+}
+
+.employee-grid {
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.employee-grid p {
+  color: #666;
+}
+
+
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .search-container{
+    position: absolute;
+  top: 30px;
+  left: 20px;
+  width: 150px;
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+  .filter-buttons button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .search-container{
+     position: absolute;
+     top: 30px;
+     left: 20px;
+     width: 100px;
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+  }
+
+
+  .filter-buttons button {
+    padding: 8px 10px;
+    width: 100%;
   }
 }

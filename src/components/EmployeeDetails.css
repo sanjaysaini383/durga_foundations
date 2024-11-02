@@ -1,0 +1,82 @@
+.employee-details {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.employee-info h2 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.employee-info p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-inline: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .employee-details {
+    padding: 15px;
+  }
+
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+
+  .employee-info h2 {
+    font-size: 22px;
+  }
+
+  .employee-info p {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .employee-details {
+    padding: 10px;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  .employee-info h2 {
+    font-size: 20px;
+  }
+
+  .employee-info p {
+    font-size: 14px;
+  }
+
+  button {
+    
+    margin: 10px 0;
+  }
+}

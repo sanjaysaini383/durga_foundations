@@ -1,0 +1,98 @@
+.employee-card {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.employee-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.employee-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.block-button,
+.details-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.block-button {
+  background-color: #ffffff;
+  color: black;
+  border: 2px solid black;
+}
+.block-button:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  transform: scale(1.10);
+  transition-delay: 250;
+}
+
+.details-button {
+  background-color: #0c0c0e;
+  color: #fff;
+}
+.details-button:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  transform: scale(1.10);
+  transition-delay: 250;
+}
+
+@media (max-width: 768px) {
+  .employee-card {
+    padding: 15px;
+  }
+
+  .profile-picture {
+    width: 60px;
+    height: 60px;
+  }
+
+  .employee-card h3 {
+    font-size: 16px;
+  }
+
+  .employee-card p {
+    font-size: 14px;
+  }
+
+  .block-button,
+  .details-button {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-buttons {
+    /* display: flex;
+    justify-content: space-between; */
+    flex-direction: row;
+    gap: 200px; 
+    width: 200px;
+  }
+
+  .block-button,
+  .details-button {
+    width: 100%;
+  }
+}
